@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lk-va-bar-width: 72px;
+  --lk-control-bar-height: unset;
+}
+
+.agent-visualizer > .lk-audio-bar {
+  width: 72px;
+}
+
+/* State-specific visualizer styles */
+.listening-visualizer > .lk-audio-bar {
+  background-color: #3B82F6 !important; /* Blue */
+}
+
+.thinking-visualizer > .lk-audio-bar {
+  background-color: #8B5CF6 !important; /* Purple */
+}
+
+.speaking-visualizer > .lk-audio-bar {
+  background-color: #10B981 !important; /* Green */
+}
+
+.idle-visualizer > .lk-audio-bar {
+  background-color: #9CA3AF !important; /* Gray */
+}
+
+.lk-agent-control-bar {
+  @apply border-t-0 p-0 h-min mr-4;
+}
+
+.lk-disconnect-button {
+  @apply h-[36px] hover:bg-[#6b221a] hover:text-[white] bg-[#31100c] border-[#6b221a];
+}
